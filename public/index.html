@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>France BA Bâtiments</title>
-    <link href="../css/output.css" rel="stylesheet">
+    <link href="../public/css/output.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -25,10 +25,10 @@
     <!-- Header -->
     <header>
         <!-- Navbar -->
-        <nav x-data="{ open: false }" class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <nav x-data="{ open: false }" class="bg-white shadow-md fixed top-0 left-0 w-full z-50 mb-10">
             <div class="container mx-auto flex justify-between items-center p-4">
-                <div class="text-customblue font-bold text-xl">Logo</div>
-                <div class="bg-customblue text-white p-4 font-bold text-xl">06 88 50 66 49</div>
+                <img src="../assets/logo.jpg" class="w-20">
+                <div class="absolute inset-x-0 top-1/2 transform -translate-y-1/2 text-customblue text-xl font-bold text-center">06 88 50 66 49</div>
         
                 <button @click="open = !open" class="lg:hidden text-customblue">
                     <div class="w-6 h-6 relative">
@@ -62,33 +62,64 @@
 
     <!-- Hero Section -->
     <section id="home" class="bg-customblue text-white text-center p-12">
-        <h1 class="text-4xl font-bold mb-4">Construction, Rénovation, Aménagement extérieur</h1>
-        <p class="text-lg mb-8">Votre partenaire de confiance pour tous vos projets de maçonnerie générale à Caen et ses environs.</p>
-        <p class="text-base mb-8">
+        <h1 class="text-4xl font-bold mb-4 mx-10">Construction, Rénovation, Aménagement extérieur</h1>
+        <p class="text-lg mb-8 mx-10">Votre partenaire de confiance pour tous vos projets de maçonnerie générale à Caen et ses environs.</p>
+        <p class="text-base mb-8 mx-10">
             Spécialisés dans la construction neuve, la rénovation et les aménagements extérieurs, nous mettons notre savoir-faire et notre expérience à votre service pour réaliser vos projets selon vos envies et votre budget. Que vous souhaitiez construire votre maison, rénover votre appartement, aménager votre jardin ou restaurer un bâtiment ancien, notre équipe de maçons qualifiés saura répondre à vos attentes avec professionnalisme et rigueur. N'hésitez pas à nous contacter pour un devis gratuit et personnalisé.
         </p>
         <a href="#contact" class="bg-custombrown text-white py-2 px-4 rounded">Contactez-nous</a>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="container mx-auto py-12">
-        <h2 class="text-3xl font-bold text-center mb-8">Nos Services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Service Card -->
-            <div class="bg-white p-6 shadow-md rounded">
-                <h3 class="text-xl font-bold mb-4">Service 1</h3>
-                <p>Description du service 1.</p>
+       <!-- Services Section -->
+       <section id="services" class="container mx-auto py-12" x-data="{ activeSlide: 0 }">
+        <h2 class="text-3xl font-bold text-center mb-8 text-custombrown uppercase">Nos Services</h2>
+        <p class="text-center mb-8">Nous proposons tous types de services adaptés à vos besoins</p>
+
+        <div class="flex flex-col md:flex-row justify-center mt-4 space-y-2 md:space-y-0 md:space-x-4">
+            <button @click="activeSlide = 0" class="bg-custombrown text-white px-4 py-2 rounded w-full sm:w-auto" :class="{ 'bg-gray-700': activeSlide === 0 }">Construction</button>
+            <button @click="activeSlide = 1" class="bg-custombrown text-white px-4 py-2 rounded w-full sm:w-auto" :class="{ 'bg-gray-700': activeSlide === 1 }">Rénovation</button>
+            <button @click="activeSlide = 2" class="bg-custombrown text-white px-4 py-2 rounded w-full sm:w-auto" :class="{ 'bg-gray-700': activeSlide === 2 }">Aménagement</button>
+        </div>
+
+        <div class="relative w-full">
+            <div class="flex">
+                <div class="w-full" x-show="activeSlide === 0">
+                    <div class="bg-white p-6 shadow-md rounded mx-10">
+                        <img src="/assets/construction.png" alt="logo" class="w-10 mx-auto">
+                        <h3 class="text-xl font-bold mb-4">Construction</h3>
+                        <ul>
+                            <li>Construction neuve de maisons et bâtiments</li>
+                            <li>Extensions et surélévations</li>
+                            <li>Création de fondations et dalles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full" x-show="activeSlide === 1">
+                    <div class="bg-white p-6 shadow-md rounded mx-10">
+                        <img src="/assets/renovation.png" alt="logo" class="w-10 mx-auto">
+                        <h3 class="text-xl font-bold mb-4">Rénovation</h3>
+                        <ul>
+                            <li>Rénovation complète de maisons ou appartements : restructuration, aménagement intérieur, etc.</li>
+                            <li>Rénovation de façades : ravalement, isolation thermique par l'extérieur (ITE), etc.</li>
+                            <li>Réparation de maçonnerie : reprise de fissures, réfection de murs, etc.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full" x-show="activeSlide === 2">
+                    <div class="bg-white p-6 shadow-md rounded mx-10">
+                        <img src="/assets/amenagement.png" alt="logo" class="w-10 mx-auto">
+                        <h3 class="text-xl font-bold mb-4">Aménagement extérieur</h3>
+                        <ul>
+                            <li>Terrasses et allées : dallage, pavage, béton désactivé, etc.</li>
+                            <li>Clôtures et murets : construction en pierres, briques, parpaings, etc.</li>
+                            <li>Aménagements paysagers : escaliers extérieurs, murets de soutènement, etc.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <!-- Service Card -->
-            <div class="bg-white p-6 shadow-md rounded">
-                <h3 class="text-xl font-bold mb-4">Service 2</h3>
-                <p>Description du service 2.</p>
-            </div>
-            <!-- Service Card -->
-            <div class="bg-white p-6 shadow-md rounded">
-                <h3 class="text-xl font-bold mb-4">Service 3</h3>
-                <p>Description du service 3.</p>
-            </div>
+            <!-- Navigation Buttons -->
+
+           
         </div>
     </section>
 
@@ -96,7 +127,7 @@
     <section id="realisations" class="bg-gray-100 py-12">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-8">Nos Réalisations</h2>
-            <p class="text-lg mb-6">Découvrez quelques-unes de nos réalisations récentes.</p>
+            <p class="text-lg mx-10 mb-6">Découvrez quelques-unes de nos réalisations récentes.</p>
             <!-- Galerie de réalisations -->
         </div>
     </section>
@@ -104,43 +135,31 @@
     <!-- Contact Section -->
     <section id="contact" class="bg-gray-100 text-center py-12">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-8">Contactez-nous</h2>
-            <p class="text-lg mb-6">Nous serions ravis de discuter de vos projets et de répondre à toutes vos questions.</p>
+            <h2 class="text-3xl font-bold mb-8 mx-auto">Contactez-nous</h2>
+            <p class="text-lg mx-10 mb-6 ">Nous serions ravis de discuter de vos projets et de répondre à toutes vos questions.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Email Block -->
-                <div class="bg-white p-6 shadow-md rounded flex items-center">
-                    <div class="w-12 h-12 bg-custombrown rounded-full flex items-center justify-center mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 6l9 6 9-6M3 18l9-6 9 6" />
-                        </svg>
-                    </div>
+                <div class="bg-white p-6 shadow-md rounded items-center mx-10">
                     <div>
+                        <img src="/assets/email-svgrepo-com.svg" alt="logo" class="w-10 mx-auto">
                         <h3 class="text-xl font-bold mb-2">Email</h3>
                         <p>Partagez-nous votre projet ou votre demande par email et nous y répondrons dans les meilleurs délais.</p>
                         <a href="mailto:francebabatiment@gmail.com" class="text-custombrown font-bold">francebabatiment@gmail.com</a>
                     </div>
                 </div>
                 <!-- Phone Block -->
-                <div class="bg-white p-6 shadow-md rounded flex items-center">
-                    <div class="w-12 h-12 bg-custombrown rounded-full flex items-center justify-center mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h3l1 5h10l1-5h3M4 4h2l1 5h10l1-5h2M4 8h1l1 5h10l1-5h1m-2 7h-6m4 4H6m3 0h4" />
-                        </svg>
-                    </div>
+                <div class="bg-white p-6 shadow-md rounded  items-center mx-10">
                     <div>
+                        <img src="/assets/mobile-phone-svgrepo-com.svg" alt="logo" class="w-10 mx-auto">
                         <h3 class="text-xl font-bold mb-2">Téléphone</h3>
                         <p>Appelez-nous directement pour échanger sur votre projet.</p>
                         <a href="tel:+330688506649" class="text-customblue font-bold">+33 06 88 50 66 49</a>
                     </div>
                 </div>
                 <!-- Location Block -->
-                <div class="bg-white p-6 shadow-md rounded flex items-center">
-                    <div class="w-12 h-12 bg-custombrown rounded-full flex items-center justify-center mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5c1.88 0 3.41 1.16 4.09 2.75.48-.07.97-.12 1.5-.12 2.21 0 4 1.79 4 4 0 2.21-1.79 4-4 4-2.21 0-4-1.79-4-4 0-.53.05-1.02.12-1.5C8.16 8.41 9.69 7 11.5 7c.53 0 1.02.05 1.5.12C11.02 6.05 10.53 5 10 5h2zm0-1a6.003 6.003 0 00-5.43 3.1C5.82 8.74 4 10.76 4 13c0 2.24 1.82 4.26 4.57 4.9 1.16.33 2.42.1 3.43-.7 1.01.8 2.27 1.03 3.43.7C18.18 17.26 20 15.24 20 13c0-2.24-1.82-4.26-4.57-4.9A6.003 6.003 0 0012 4zM4 19h4v1H4v-1z" />
-                        </svg>
-                    </div>
+                <div class="bg-white p-6 shadow-md rounded  items-center mx-10">
                     <div>
+                        <img src="/assets/home-filled-svgrepo-com.svg" alt="logo" class="w-10 mx-auto">
                         <h3 class="text-xl font-bold mb-2">Nos bureaux</h3>
                         <p>Venez nous rencontrer directement à nos bureaux.</p>
                         <address class="text-custombrown font-bold">39 rue Monseigneur Adam, 14000 Caen</address>

@@ -1,11 +1,11 @@
 module.exports = {
   content: [
-    "./src/**/*.{html,js}",
+    "./**/*.{html,js}",
   ],
   theme: {
     extend: {
       colors: {
-        custombrown: '#d09c61',
+        custombrown: '#D09C61',
         customblue: '#132533',
       },
     },
