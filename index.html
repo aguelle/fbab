@@ -8,6 +8,42 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'twine': {
+                            '50': '#fbf8f1',
+                            '100': '#f6eede',
+                            '200': '#ecdabc',
+                            '300': '#dfbf92',
+                            '400': '#d09c61',
+                            DEFAULT: '#c88647',
+                            '600': '#ba713c',
+                            '700': '#9a5a34',
+                            '800': '#7c4930',
+                            '900': '#653d29',
+                            '950': '#361e14',
+                        },
+                        'big-stone': {
+                            '50': '#f3f7fc',
+                            '100': '#e6eff8',
+                            '200': '#c8ddef',
+                            '300': '#98c2e1',
+                            '400': '#61a2cf',
+                            '500': '#3d86ba',
+                            '600': '#2c6b9d',
+                            '700': '#25567f',
+                            '800': '#224a6a',
+                            '900': '#213e59',
+                            DEFAULT: '#192e43',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
 
 
 </head>
@@ -19,15 +55,15 @@
         <!-- Navbar -->
         <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50 mb-10">
             <div class="text-xl text-center p-2">
-                <a href="tel:+330688506649" class="text-blue-950 hover:text-gray-950">06 88 50 66 49</a>
-                <a href="mailto:francebabatiment@gmail.com" class="text-blue-950 hover:text-gray-950">francebabatiment@gmail.com</a>
+                <a href="tel:+330688506649" class="text-big-stone hover:text-big-stone/70">06 88 50 66 49</a>
+                <a href="mailto:francebabatiment@gmail.com" class="text-big-stone hover:text-big-stone/70">francebabatiment@gmail.com</a>
             </div>
             <div class="container mx-auto flex justify-between items-center p-4">
                 <img src="../assets/icons/logo.jpg" class="w-20">
 
 
                 <!-- Bouton pour le menu mobile -->
-                <button id="menuButton" class="lg:hidden text-customblue">
+                <button id="menuButton" class="lg:hidden text-bigstone ">
                     <div class="w-6 h-6 relative">
                         <svg id="menuOpenIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -44,10 +80,10 @@
                 <!-- Menu pour les grands écrans -->
                 <div class="hidden lg:flex">
                     <ul class="lg:flex space-x-4">
-                        <li><a class="text-customblue" href="#home">Accueil</a></li>
-                        <li><a class="text-customblue" href="#services">Services</a></li>
-                        <li><a class="text-customblue" href="#realisations">Réalisations</a></li>
-                        <li><a class="text-customblue" href="#contact">Contact</a></li>
+                        <li><a class="text-big-stone hover:text-big-stone/70 " href="#home">Accueil</a></li>
+                        <li><a class="text-big-stone hover:text-big-stone/70" href="#services">Services</a></li>
+                        <li><a class="text-big-stone hover:text-big-stone/70" href="#realisations">Réalisations</a></li>
+                        <li><a class="text-big-stone hover:text-big-stone/70" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,17 +91,17 @@
             <!-- Menu mobile -->
             <div id="mobileMenu" class="hidden lg:hidden">
                 <ul class="bg-white p-4">
-                    <li><a class="text-customblue block py-2" href="#home">Accueil</a></li>
-                    <li><a class="text-customblue block py-2" href="#services">Services</a></li>
-                    <li><a class="text-customblue block py-2" href="#realisations">Réalisations</a></li>
-                    <li><a class="text-customblue block py-2" href="#contact">Contact</a></li>
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#home">Accueil</a></li>
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#services">Services</a></li>
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#realisations">Réalisations</a></li>
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-blue text-white text-center p-24 mt-24">
+    <section id="home" class="bg-big-stone text-big text-white text-center p-24 mt-24">
         <h1 class="text-4xl font-bold mb-4 mx-10">Construction, Rénovation, Aménagement extérieur</h1>
         <p class="text-lg mb-8 mx-10">Votre partenaire de confiance pour tous vos projets de maçonnerie générale à Caen
             et ses environs.</p>
@@ -76,7 +112,7 @@
             un bâtiment ancien, notre équipe de maçons qualifiés saura répondre à vos attentes avec professionnalisme et
             rigueur. N'hésitez pas à nous contacter pour un devis gratuit et personnalisé.
         </p>
-        <a href="#contact" class="bg-custombrown text-white py-2 px-4 rounded">Contactez-nous</a>
+        <a href="#contact" class="bg-twine hover:bg-twine/70 text-white py-2 px-4 rounded">Contactez-nous</a>
     </section>
 
     <section id="services" class="container mx-auto py-12">
@@ -88,15 +124,15 @@
             <!-- Flexbox pour aligner les boutons horizontalement -->
             <div class="flex flex-col md:flex-row gap-2 md:gap-4">
                 <button id="btnConstruction"
-                    class="border-custombrown border-2 text-customblue px-4 py-2 rounded mx-2 h-10 flex items-center justify-center">
+                    class="border-twine border-2 text-big-stone hover:text-big-stone/70 px-4 py-2 rounded mx-2 h-10 flex items-center justify-center">
                     Construction
                 </button>
                 <button id="btnRenovation"
-                    class="border-custombrown border-2 text-customblue px-4 py-2 rounded mx-2 h-10 flex items-center justify-center">
+                    class="border-twine border-2 text-big-stone hover:text-big-stone/70 px-4 py-2 rounded mx-2 h-10 flex items-center justify-center">
                     Rénovation
                 </button>
                 <button id="btnAmenagement"
-                    class="border-custombrown border-2 text-customblue px-4 py-2 rounded mx-2 h-10 flex items-center justify-center">
+                    class="border-twine border-2 text-big-stone hover:text-big-stone/70 px-4 py-2 rounded mx-2 h-10 flex items-center justify-center">
                     Aménagement
                 </button>
             </div>
@@ -108,7 +144,7 @@
                 <div id="contentConstruction" class="w-full hidden">
                     <div class="bg-white p-6 shadow-md rounded mx-10 flex items-center justify-between">
                         <div class="flex-1 pr-4">
-                            <h3 class="text-xl font-bold mb-4">🏠Construction</h3>
+                            <h3 class="text-xl font-bold mb-4">🏠 Construction</h3>
                             <ul>
                                 <li>Construction neuve de maisons et bâtiments</li>
                                 <li>Extensions et surélévations</li>
@@ -123,7 +159,7 @@
                 <div id="contentRenovation" class="w-full hidden">
                     <div class="bg-white p-6 shadow-md rounded mx-10 flex items-center justify-between">
                         <div class="flex-1 pr-4">
-                            <h3 class="text-xl font-bold mb-4">🛠️Rénovation</h3>
+                            <h3 class="text-xl font-bold mb-4">🛠️ Rénovation</h3>
                             <ul>
                                 <li>Rénovation complète de maisons ou appartements : restructuration, aménagement
                                     intérieur, etc.</li>
@@ -140,7 +176,7 @@
                 <div id="contentAmenagement" class="w-full hidden">
                     <div class="bg-white p-6 shadow-md rounded mx-10 flex items-center justify-between">
                         <div class="flex-1 pr-4">
-                            <h3 class="text-xl font-bold mb-4">🏠Aménagement extérieur</h3>
+                            <h3 class="text-xl font-bold mb-4">🏠 Aménagement extérieur</h3>
                             <ul>
                                 <li>Terrasses et allées : dallage, pavage, béton désactivé, etc.</li>
                                 <li>Clôtures et murets : construction en pierres, briques, parpaings, etc.</li>
@@ -184,7 +220,7 @@
                         <p>Partagez-nous votre projet ou votre demande par email et nous y répondrons dans les meilleurs
                             délais.</p>
                         <a href="mailto:francebabatiment@gmail.com"
-                            class="text-custombrown font-bold">francebabatiment@gmail.com</a>
+                            class="text-twine hover:text-twine/70 font-bold">francebabatiment@gmail.com</a>
                     </div>
                 </div>
                 <!-- Phone Block -->
@@ -193,7 +229,7 @@
                         <img src="/assets/icons/mobile-phone-svgrepo-com.svg" alt="logo" class="w-10 mx-auto">
                         <h3 class="text-xl font-bold mb-2">Téléphone</h3>
                         <p>Appelez-nous directement pour échanger sur votre projet.</p>
-                        <a href="tel:+330688506649" class="text-custombrown font-bold">06 88 50 66 49</a>
+                        <a href="tel:+330688506649" class="text-twine hover:text-twine/70 font-bold">06 88 50 66 49</a>
                     </div>
                 </div>
                 <!-- Location Block -->
@@ -202,7 +238,7 @@
                         <img src="/assets/icons/home-filled-svgrepo-com.svg" alt="logo" class="w-10 mx-auto">
                         <h3 class="text-xl font-bold mb-2">Nos bureaux</h3>
                         <p>Venez nous rencontrer directement à nos bureaux.</p>
-                        <address class="text-custombrown font-bold">39 rue Monseigneur Adam, 14000 Caen</address>
+                        <address class="text-twine font-bold">39 rue Monseigneur Adam, 14000 Caen</address>
                     </div>
 
                     <!-- component -->
@@ -273,7 +309,7 @@
             </p>
         </div>
     </footer>
-    <script src="../script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
