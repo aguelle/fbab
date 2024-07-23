@@ -1,8 +1,9 @@
-// Oouverture et fermeture du menu mobile
+// Ouverture et fermeture du menu mobile
 document.getElementById('menuButton').addEventListener('click', function () {
     let menu = document.getElementById('mobileMenu');
     let openIcon = document.getElementById('menuOpenIcon');
     let closeIcon = document.getElementById('menuCloseIcon');
+    
     if (menu.classList.contains('hidden')) {
         menu.classList.remove('hidden');
         menu.classList.add('block');
@@ -14,6 +15,19 @@ document.getElementById('menuButton').addEventListener('click', function () {
         openIcon.classList.remove('hidden');
         closeIcon.classList.add('hidden');
     }
+});
+// Fermer le menu mobile lorsque l'un des liens est cliqué
+document.querySelectorAll('#mobileMenu a').forEach(function (link) {
+    link.addEventListener('click', function () {
+        let menu = document.getElementById('mobileMenu');
+        let openIcon = document.getElementById('menuOpenIcon');
+        let closeIcon = document.getElementById('menuCloseIcon');
+        
+        menu.classList.add('hidden');
+        menu.classList.remove('block');
+        openIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+    });
 });
 // Affichage des contenus des services
 document.getElementById('btnConstruction').addEventListener('click', function () {

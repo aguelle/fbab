@@ -55,16 +55,15 @@
         <!-- Navbar -->
         <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50 mb-10">
             <div class="text-xl text-center bg-big-stone border-b-8 border-twine p-2 flex flex-row justify-end pr-4 py-4 sm:pr-20">
-                <a href="mailto:francebabatiment@gmail.com" class="text-white hover:text-twine/70 hidden sm:block">📧 francebabatiment@gmail.com</a>
+                <a href="mailto:francebabatiment@gmail.com" class="text-white hover:text-twine/70 hidden sm:block mr-4">📧 francebabatiment@gmail.com</a>
+                <p class="text-white mr-4 hidden sm:block">|</p>
                 <div class="flex flex-row" >
                     <a href="tel:+330688506649" class="text-white hover:text-twine/70 font-bold">📱06 88 50 66 49</a>
                 </div>
                 
             </div>
             <div class="container mx-auto flex justify-between items-center p-4">
-                <img src="./assets/icons/logo.jpg" class="w-20">
-
-
+                <a href="#home"><img src="./assets/icons/logo.jpg" class="w-20"></a>
                 <!-- Bouton pour le menu mobile -->
                 <button id="menuButton" class="lg:hidden text-big-stone ">
                     <div class="w-6 h-6 relative">
@@ -94,7 +93,7 @@
             <!-- Menu mobile -->
             <div id="mobileMenu" class="hidden lg:hidden">
                 <ul class="bg-white p-4">
-                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#home">Accueil</a></li>
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2 " href="#home">Accueil</a></li>
                     <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#services">Services</a></li>
                     <li><a class="text-big-stone hover:text-big-stone/70 block py-2"
                             href="#realisations">Réalisations</a></li>
@@ -105,28 +104,28 @@
     </header>
 
     <!-- Hero Section -->
-<section id="home" class="bg-big-stone text-big text-white text-center px-10 py-24 mt-24 md:px-52">
-        <h1 class="text-4xl font-bold mb-10">Construction, Rénovation, Aménagement extérieur</h1>
-        <p class="text-lg mb-10">Votre partenaire de confiance pour tous vos projets de maçonnerie générale à Caen
+<section id="home" class="bg-big-stone text-big text-white text-center px-10 py-52 mt-24 md:px-52">
+        <h1 class="text-4xl font-bold mb-10 py-6">Construction, Rénovation, Aménagement extérieur</h1>
+        <p class="text-lg mb-10 py-6">Votre partenaire de confiance pour tous vos projets de maçonnerie générale à Caen
             et ses environs.</p>
-        <p class="text-base mb-10 ">
+        <p class="text-base mb-10 py-6">
             Spécialisés dans la construction neuve, la rénovation et les aménagements extérieurs, nous mettons notre
             savoir-faire et notre expérience à votre service pour réaliser vos projets selon vos envies et votre budget.
             Que vous souhaitiez construire votre maison, rénover votre appartement, aménager votre jardin ou restaurer
             un bâtiment ancien, notre équipe de maçons qualifiés saura répondre à vos attentes avec professionnalisme et
             rigueur. N'hésitez pas à nous contacter pour un devis gratuit et personnalisé.
         </p>
-        <a href="#contact" class="bg-twine hover:bg-twine/70 text-white py-2 px-4 rounded">Contactez-nous</a>
+        <a href="#contact" class="border-twine border-2 hover:text-white/70 text-white py-2 px-4 rounded">Contactez-nous</a>
     </section>
 
-    <section id="services" class="container mx-auto py-12">
+    <section id="services" class="container mx-auto py-52">
         <h2 class="text-3xl font-bold text-center mb-8 text-custombrown uppercase">Nos Services</h2>
         <p class="text-center mb-8">Nous proposons tous types de services adaptés à vos besoins</p>
 
         <!-- Conteneur des boutons -->
         <div class="flex flex-wrap justify-center my-4">
             <!-- Flexbox pour aligner les boutons horizontalement -->
-            <div class="flex flex-col md:flex-row gap-2 md:gap-4">
+            <div class="flex flex-row gap-2 md:gap-4">
                 <button id="btnConstruction"
                     class="border-twine border-2 text-big-stone hover:text-big-stone/70 px-4 py-2 rounded mx-2 h-10 flex items-center justify-center">
                     Construction
@@ -197,7 +196,7 @@
     </section>
 
     <!-- Réalisations Section -->
-    <section id="realisations" class="bg-gray-100 py-12">
+    <section id="realisations" class="bg-gray-100 py-52">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-8">Nos Réalisations</h2>
             <p class="text-lg mx-10 mb-6">Découvrez quelques-unes de nos réalisations récentes.</p>
@@ -210,10 +209,10 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-gray-100 text-center py-12">
+    <section id="contact" class="bg-gray-100 text-center py-52">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-8 mx-auto">Contactez-nous</h2>
-            <p class="text-lg mx-10 mb-6 ">Nous serions ravis de discuter de vos projets et de répondre à toutes vos
+            <p class="text-lg mx-10 my-20 ">Nous serions ravis de discuter de vos projets et de répondre à toutes vos
                 questions.</p>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Email Block -->
@@ -242,33 +241,34 @@
                         <img src="./assets/icons/home-filled-svgrepo-com.svg" alt="logo" class="w-10 mx-auto">
                         <h3 class="text-xl font-bold mb-2">Nos bureaux</h3>
                         <p class="py-10">Venez nous rencontrer directement à nos bureaux.</p>
-                        <address class="text-twine font-bold">39 rue Monseigneur Adam, 14000 Caen</address>
+                        <a href="https://www.google.com/maps?ll=49.181921,-0.394231&z=15&t=m&hl=en&gl=US&mapclient=embed&q=39+Rue+Mgr+Adam+14000+Caen+France" ><address class="text-twine font-bold">39 rue Monseigneur Adam, 14000 Caen</address></a>
                     </div>
 
                     <!-- component -->
-                    <section class="text-gray-600 body-font relative mt-8">
-                        <div class="absolute inset-0 bg-gray-300">
-                            <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
-                                title="map" scrolling="no"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.9821946561347!2d-0.3968059232292702!3d49.1819244778835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a431f613f9f53%3A0x36a13cac79b66651!2s39%20Rue%20Mgr%20Adam%2C%2014000%20Caen%2C%20France!5e0!3m2!1sen!2sus!4v1721459462449!5m2!1sen!2sus"
-                                style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                        <div class="container px-5 py-24 mx-auto flex"></div>
-
-                    </section>
+                    
                 </div>
             </div>
         </div>
     </section>
-
+    <section class="text-gray-600 body-font relative py-52 mt-8">
+        <div class="absolute inset-0 bg-gray-300">
+            <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+                title="map" scrolling="no"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.9821946561347!2d-0.3968059232292702!3d49.1819244778835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a431f613f9f53%3A0x36a13cac79b66651!2s39%20Rue%20Mgr%20Adam%2C%2014000%20Caen%2C%20France!5e0!3m2!1sen!2sus!4v1721459462449!5m2!1sen!2sus"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="container px-5 py-24 mx-auto flex"></div>
+    
+   
+    </section>
     <!-- Footer -->
     <footer class="bg-gray-800 text-white p-4 mt-8">
-        <div class="container mx-auto text-center">
-            &copy; 2024 France BA Bâtiments. Tous droits réservés.
-            <a href="./mentions.html" id="toggleLegal" class="hover:underline">Mentions légales.</a>
-        </div>
+      <div class="container mx-auto text-center">
+                &copy; 2024 France BA Bâtiments. Tous droits réservés.
+                <a href="mentions.html" target="_blank" id="toggleLegal" class="hover:underline">Mentions légales.</a>
+            </div>
     </footer>
     <script src="./script.js"></script>
 </body>

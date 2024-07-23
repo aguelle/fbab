@@ -52,16 +52,19 @@
 
     <header>
         <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50 mb-10">
-            <div class="text-xl text-center p-2">
-                <a href="tel:+330688506649" class="text-big-stone hover:text-big-stone/70">06 88 50 66 49</a>
-                <a href="mailto:francebabatiment@gmail.com" class="text-big-stone hover:text-big-stone/70">francebabatiment@gmail.com</a>
+            <div class="text-xl text-center bg-big-stone border-b-8 border-twine p-2 flex flex-row justify-end pr-4 py-4 sm:pr-20">
+                <a href="mailto:francebabatiment@gmail.com" class="text-white hover:text-twine/70 hidden sm:block">📧 francebabatiment@gmail.com</a>
+                <div class="flex flex-row" >
+                    <a href="tel:+330688506649" class="text-white hover:text-twine/70 font-bold">📱06 88 50 66 49</a>
+                </div>
+                
             </div>
             <div class="container mx-auto flex justify-between items-center p-4">
                 <img src="./assets/icons/logo.jpg" class="w-20">
 
 
                 <!-- Bouton pour le menu mobile -->
-                <button id="menuButton" class="lg:hidden text-bigstone ">
+                <button id="menuButton" class="lg:hidden text-big-stone ">
                     <div class="w-6 h-6 relative">
                         <svg id="menuOpenIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -91,7 +94,8 @@
                 <ul class="bg-white p-4">
                     <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#home">Accueil</a></li>
                     <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#services">Services</a></li>
-                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#realisations">Réalisations</a></li>
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2"
+                            href="#realisations">Réalisations</a></li>
                     <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -147,17 +151,14 @@
 
     <section id="services" class="container mx-auto py-12">
 
-
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white p-4 mt-8">
-        <div class="container mx-auto text-center">
-            &copy; 2024 France BA Bâtiments. Tous droits réservés.
-            <a href="#" id="toggleLegal" class="hover:underline">Mentions légales.</a>
-        </div>
-       
-    </footer>
-    <script src="./script.js"></script>
+ <!-- Footer -->
+ <footer class="bg-gray-800 text-white p-4 mt-8">
+    <div class="container mx-auto text-center">
+        &copy; 2024 France BA Bâtiments. Tous droits réservés.
+        <a href="mentions.html" target="_blank" id="toggleLegal" class="hover:underline">Mentions légales.</a>
+    </div>
+</footer>
+<script src="./script.js"></script>
 </body>
 
 </html>
