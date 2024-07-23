@@ -7,7 +7,7 @@
     <title>France BA Bâtiments</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script>
         tailwind.config = {
             theme: {
@@ -54,16 +54,19 @@
     <header>
         <!-- Navbar -->
         <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50 mb-10">
-            <div class="text-xl text-center p-2">
-                <a href="tel:+330688506649" class="text-big-stone hover:text-big-stone/70">06 88 50 66 49</a>
-                <a href="mailto:francebabatiment@gmail.com" class="text-big-stone hover:text-big-stone/70">francebabatiment@gmail.com</a>
+            <div class="text-xl text-center bg-big-stone p-2 flex flex-row justify-end pr-4 py-4 sm:pr-20">
+                <a href="mailto:francebabatiment@gmail.com" class="text-twine hover:text-twine/70 font-bold hidden sm:block">📧 francebabatiment@gmail.com</a>
+                <div class="flex flex-row" >
+                    <a href="tel:+330688506649" class="text-twine hover:text-twine/70 font-bold">📱06 88 50 66 49</a>
+                </div>
+                
             </div>
             <div class="container mx-auto flex justify-between items-center p-4">
                 <img src="./assets/icons/logo.jpg" class="w-20">
 
 
                 <!-- Bouton pour le menu mobile -->
-                <button id="menuButton" class="lg:hidden text-bigstone ">
+                <button id="menuButton" class="lg:hidden text-big-stone ">
                     <div class="w-6 h-6 relative">
                         <svg id="menuOpenIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -93,7 +96,8 @@
                 <ul class="bg-white p-4">
                     <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#home">Accueil</a></li>
                     <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#services">Services</a></li>
-                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#realisations">Réalisations</a></li>
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2"
+                            href="#realisations">Réalisations</a></li>
                     <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -101,11 +105,11 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-big-stone text-big text-white text-center p-24 mt-24">
-        <h1 class="text-4xl font-bold mb-4 mx-10">Construction, Rénovation, Aménagement extérieur</h1>
-        <p class="text-lg mb-8 mx-10">Votre partenaire de confiance pour tous vos projets de maçonnerie générale à Caen
+<section id="home" class="bg-big-stone text-big text-white text-center px-6 py-24 mt-24">
+        <h1 class="text-4xl font-bold mb-4">Construction, Rénovation, Aménagement extérieur</h1>
+        <p class="text-lg mb-8">Votre partenaire de confiance pour tous vos projets de maçonnerie générale à Caen
             et ses environs.</p>
-        <p class="text-base mb-8 mx-10">
+        <p class="text-base mb-8 ">
             Spécialisés dans la construction neuve, la rénovation et les aménagements extérieurs, nous mettons notre
             savoir-faire et notre expérience à votre service pour réaliser vos projets selon vos envies et votre budget.
             Que vous souhaitiez construire votre maison, rénover votre appartement, aménager votre jardin ou restaurer
@@ -176,7 +180,7 @@
                 <div id="contentAmenagement" class="w-full hidden">
                     <div class="bg-white p-6 shadow-md rounded mx-10 flex items-center justify-between">
                         <div class="flex-1 pr-4">
-                            <h3 class="text-xl font-bold mb-4">🏠 Aménagement extérieur</h3>
+                            <h3 class="text-xl font-bold mb-4">🏡 Aménagement extérieur</h3>
                             <ul>
                                 <li>Terrasses et allées : dallage, pavage, béton désactivé, etc.</li>
                                 <li>Clôtures et murets : construction en pierres, briques, parpaings, etc.</li>
@@ -198,9 +202,9 @@
             <h2 class="text-3xl font-bold mb-8">Nos Réalisations</h2>
             <p class="text-lg mx-10 mb-6">Découvrez quelques-unes de nos réalisations récentes.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <img src="./assets/photos/20191003_170800.webp" class="max-w-[60px] md:max-w-none">
-                <img src="./assets/photos/20191106_152817.webp" class="max-w-[60px] md:max-w-none">
-                <img src="./assets/photos/20200609_165725.webp" class="max-w-[60px] md:max-w-none">
+                <img src="./assets/photos/20191003_170800.webp" class="min-w-[50px] md:max-w-[50%]">
+                <img src="./assets/photos/20191106_152817.webp" class="min-w-[50px] md:max-w-[50%]">
+                <img src="./assets/photos/20200609_165725.webp" class="min-w-[50px] md:max-w-[50%]">
             </div>
         </div>
     </section>
@@ -251,7 +255,7 @@
                                 referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
-                        <div class="container px-5 py-24 mx-auto flex">
+                        <div class="container px-5 py-24 mx-auto flex"></div>
 
                     </section>
                 </div>
@@ -263,50 +267,7 @@
     <footer class="bg-gray-800 text-white p-4 mt-8">
         <div class="container mx-auto text-center">
             &copy; 2024 France BA Bâtiments. Tous droits réservés.
-            <a href="#" id="toggleLegal" class="hover:underline">Mentions légales.</a>
-        </div>
-        <div id="legalSection" class="bg-gray-700 p-4 mt-4 text-sm rounded hidden">
-            <p>
-                Nom de l'entreprise : France BA Bâtiments<br>
-                Adresse : 39 rue Monseigneur Adam 14000 Caen France<br>
-                Adresse email : francebabatiment@gmail.com<br>
-                Téléphone : +33 06 88 50 66 49<br>
-                Directeur de la publication : Nom du directeur de la publication<br>
-                Hébergement du site : Nom de l'hébergeur<br>
-                Adresse de l'hébergeur : Adresse de l'hébergeur<br>
-                Téléphone de l'hébergeur : Téléphone de l'hébergeur<br>
-                Email de l'hébergeur : Email de l'hébergeur<br>
-                Propriété intellectuelle : Le contenu du site France BA Bâtiments (textes, images, graphismes, logo,
-                icônes, etc.) est la propriété exclusive de France BA Bâtiments, sauf mention contraire. Toute
-                reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de
-                ces différents éléments est strictement interdite sans l'accord écrit de France BA Bâtiments. Cette
-                représentation ou reproduction, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée
-                par les articles L.335-2 et suivants du Code de la propriété intellectuelle.<br>
-                Responsabilité : France BA Bâtiments s'efforce d'assurer au mieux de ses possibilités, l'exactitude et
-                la mise à jour des informations diffusées sur ce site, et se réserve le droit de corriger, à tout moment
-                et sans préavis, le contenu. Toutefois, France BA Bâtiments ne peut garantir l'exactitude, la précision
-                ou l'exhaustivité des informations mises à disposition sur ce site. En conséquence, France BA Bâtiments
-                décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des
-                informations disponibles sur ce site.<br>
-                Données personnelles : Les informations recueillies sur ce site sont enregistrées dans un fichier
-                informatisé par France BA Bâtiments pour la gestion de sa clientèle. Elles sont conservées pendant 3 ans
-                et sont destinées au service marketing et commercial. Conformément à la loi « informatique et libertés
-                », vous pouvez exercer votre droit d'accès aux données vous concernant et les faire rectifier en
-                contactant : francebabatiment@gmail.com.<br>
-                Liens hypertextes : Le site France BA Bâtiments peut contenir des liens hypertextes vers d'autres sites
-                présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le site France
-                BA Bâtiments. Il est possible de créer un lien vers la page de présentation de ce site sans autorisation
-                expresse de France BA Bâtiments. Aucune autorisation ou demande d’information préalable ne peut être
-                exigée par l’éditeur à l’égard d’un site qui souhaite établir un lien vers le site de l’éditeur.
-                Cependant, ce site doit être affiché dans une nouvelle fenêtre du navigateur. Cependant, France BA
-                Bâtiments se réserve le droit de demander la suppression d’un lien qu’il estime non conforme à l’objet
-                du site France BA Bâtiments.<br>
-                Litiges : Les présentes conditions du site France BA Bâtiments sont régies par les lois françaises et
-                toute contestation ou litiges qui pourraient naître de l'interprétation ou de l'exécution de celles-ci
-                seront de la compétence exclusive des tribunaux dont dépend le siège social de l'entreprise. La langue
-                de référence, pour le règlement de contentieux éventuels, est le français.<br>
-                Crédits : Conception et réalisation : Photos : Dernière mise à jour : 04 juillet 2024
-            </p>
+            <a href="./mentions.html" id="toggleLegal" class="hover:underline">Mentions légales.</a>
         </div>
     </footer>
     <script src="./script.js"></script>

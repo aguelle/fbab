@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>France BA Bâtiments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'twine': {
+                            '50': '#fbf8f1',
+                            '100': '#f6eede',
+                            '200': '#ecdabc',
+                            '300': '#dfbf92',
+                            '400': '#d09c61',
+                            DEFAULT: '#c88647',
+                            '600': '#ba713c',
+                            '700': '#9a5a34',
+                            '800': '#7c4930',
+                            '900': '#653d29',
+                            '950': '#361e14',
+                        },
+                        'big-stone': {
+                            '50': '#f3f7fc',
+                            '100': '#e6eff8',
+                            '200': '#c8ddef',
+                            '300': '#98c2e1',
+                            '400': '#61a2cf',
+                            '500': '#3d86ba',
+                            '600': '#2c6b9d',
+                            '700': '#25567f',
+                            '800': '#224a6a',
+                            '900': '#213e59',
+                            DEFAULT: '#192e43',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+<body class="bg-gray-100">
+
+    <header>
+        <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50 mb-10">
+            <div class="text-xl text-center p-2">
+                <a href="tel:+330688506649" class="text-big-stone hover:text-big-stone/70">06 88 50 66 49</a>
+                <a href="mailto:francebabatiment@gmail.com" class="text-big-stone hover:text-big-stone/70">francebabatiment@gmail.com</a>
+            </div>
+            <div class="container mx-auto flex justify-between items-center p-4">
+                <img src="./assets/icons/logo.jpg" class="w-20">
+
+
+                <!-- Bouton pour le menu mobile -->
+                <button id="menuButton" class="lg:hidden text-bigstone ">
+                    <div class="w-6 h-6 relative">
+                        <svg id="menuOpenIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menuCloseIcon" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                </button>
+
+                <!-- Menu pour les grands écrans -->
+                <div class="hidden lg:flex">
+                    <ul class="lg:flex space-x-4">
+                        <li><a class="text-big-stone hover:text-big-stone/70 " href="#home">Accueil</a></li>
+                        <li><a class="text-big-stone hover:text-big-stone/70" href="#services">Services</a></li>
+                        <li><a class="text-big-stone hover:text-big-stone/70" href="#realisations">Réalisations</a></li>
+                        <li><a class="text-big-stone hover:text-big-stone/70" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Menu mobile -->
+            <div id="mobileMenu" class="hidden lg:hidden">
+                <ul class="bg-white p-4">
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#home">Accueil</a></li>
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#services">Services</a></li>
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#realisations">Réalisations</a></li>
+                    <li><a class="text-big-stone hover:text-big-stone/70 block py-2" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="legals" class="bg-big-stone text-big text-white text-center p-24 mt-24">
+        <div id="legalSection" class="bg-gray-700 p-4 mt-4 text-sm rounded hidden">
+            <p>
+                Nom de l'entreprise : France BA Bâtiments<br>
+                Adresse : 39 rue Monseigneur Adam 14000 Caen France<br>
+                Adresse email : francebabatiment@gmail.com<br>
+                Téléphone : +33 06 88 50 66 49<br>
+                Directeur de la publication : Nom du directeur de la publication<br>
+                Hébergement du site : Nom de l'hébergeur<br>
+                Adresse de l'hébergeur : Adresse de l'hébergeur<br>
+                Téléphone de l'hébergeur : Téléphone de l'hébergeur<br>
+                Email de l'hébergeur : Email de l'hébergeur<br>
+                Propriété intellectuelle : Le contenu du site France BA Bâtiments (textes, images, graphismes, logo,
+                icônes, etc.) est la propriété exclusive de France BA Bâtiments, sauf mention contraire. Toute
+                reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de
+                ces différents éléments est strictement interdite sans l'accord écrit de France BA Bâtiments. Cette
+                représentation ou reproduction, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée
+                par les articles L.335-2 et suivants du Code de la propriété intellectuelle.<br>
+                Responsabilité : France BA Bâtiments s'efforce d'assurer au mieux de ses possibilités, l'exactitude et
+                la mise à jour des informations diffusées sur ce site, et se réserve le droit de corriger, à tout moment
+                et sans préavis, le contenu. Toutefois, France BA Bâtiments ne peut garantir l'exactitude, la précision
+                ou l'exhaustivité des informations mises à disposition sur ce site. En conséquence, France BA Bâtiments
+                décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des
+                informations disponibles sur ce site.<br>
+                Données personnelles : Les informations recueillies sur ce site sont enregistrées dans un fichier
+                informatisé par France BA Bâtiments pour la gestion de sa clientèle. Elles sont conservées pendant 3 ans
+                et sont destinées au service marketing et commercial. Conformément à la loi « informatique et libertés
+                », vous pouvez exercer votre droit d'accès aux données vous concernant et les faire rectifier en
+                contactant : francebabatiment@gmail.com.<br>
+                Liens hypertextes : Le site France BA Bâtiments peut contenir des liens hypertextes vers d'autres sites
+                présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le site France
+                BA Bâtiments. Il est possible de créer un lien vers la page de présentation de ce site sans autorisation
+                expresse de France BA Bâtiments. Aucune autorisation ou demande d’information préalable ne peut être
+                exigée par l’éditeur à l’égard d’un site qui souhaite établir un lien vers le site de l’éditeur.
+                Cependant, ce site doit être affiché dans une nouvelle fenêtre du navigateur. Cependant, France BA
+                Bâtiments se réserve le droit de demander la suppression d’un lien qu’il estime non conforme à l’objet
+                du site France BA Bâtiments.<br>
+                Litiges : Les présentes conditions du site France BA Bâtiments sont régies par les lois françaises et
+                toute contestation ou litiges qui pourraient naître de l'interprétation ou de l'exécution de celles-ci
+                seront de la compétence exclusive des tribunaux dont dépend le siège social de l'entreprise. La langue
+                de référence, pour le règlement de contentieux éventuels, est le français.<br>
+                Crédits : Conception et réalisation : Photos : Dernière mise à jour : 04 juillet 2024
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="container mx-auto py-12">
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            &copy; 2024 France BA Bâtiments. Tous droits réservés.
+            <a href="#" id="toggleLegal" class="hover:underline">Mentions légales.</a>
+        </div>
+       
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
