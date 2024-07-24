@@ -46,11 +46,13 @@ function showContent(type) {
         if (content === type) {
             document.getElementById(`content${capitalize(content)}`).classList.remove('hidden');
             document.getElementById(`content${capitalize(content)}`).classList.add('block');
-            document.getElementById(`btn${capitalize(content)}`).classList.add('text-twine');
+            document.getElementById(`btn${capitalize(content)}`).classList.add('bg-twine','text-white',);
+
         } else {
             document.getElementById(`content${capitalize(content)}`).classList.add('hidden');
             document.getElementById(`content${capitalize(content)}`).classList.remove('block');
-            document.getElementById(`btn${capitalize(content)}`).classList.remove( 'text-twine');
+            document.getElementById(`btn${capitalize(content)}`).classList.remove('bg-twine','text-white');
+
         }
     });
 }
