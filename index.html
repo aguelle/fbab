@@ -167,7 +167,7 @@
                             <ul>
                                 <li>Rénovation complète de maisons ou appartements : restructuration, aménagement
                                     intérieur, etc.</li>
-                                <li>Rénovation de façades : ravalement, isolation thermique par l'extérieur (ITE), etc.
+                                <li>Rénovation de façades, ravalement.
                                 </li>
                                 <li>Réparation de maçonnerie : reprise de fissures, réfection de murs, etc.</li>
                             </ul>
@@ -201,21 +201,32 @@
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-8">Nos Réalisations</h2>
             <p class="text-lg mx-10 mb-6">Découvrez quelques-unes de nos réalisations récentes.</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <img src="./assets/photos/20191003_170800.webp" class="min-w-[50px] md:max-w-[50%]">
-                <img src="./assets/photos/20191106_152817.webp" class="min-w-[50px] md:max-w-[50%]">
-                <img src="./assets/photos/20200609_165725.webp" class="min-w-[50px] md:max-w-[50%]">
+            <div class="flex flex-wrap">
+                <div class="p-4 md:pr-2 w-full md:w-1/2 max-h-[450px] lg:max-h-[600px] overflow-hidden">
+                    <img src="./assets/photos/terrasse.webp" alt="construction de terrasse extérieur" class="object-contain w-full">
+                </div>
+                <div class="p-4 md:pr-2 w-full md:w-1/2 max-h-[450px] lg:max-h-[600px] overflow-hidden">
+                    <img src="./assets/photos/porte.webp" alt="construction de mur en anglo" class="object-contain w-full">
+                </div>
+                <div class="p-4 w-full overflow-hidden">
+                    <img src="./assets/photos/pavé.webp" alt="rénovation d'une allée avec des pavées" class="object-contain w-full">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4 justify-center p-4 pt-0">
+                <img src="./assets/photos/20191003_170800.webp" alt="rénovation de maison" class="min-w-[50px] md:max-w-[50%]">
+                <img src="./assets/photos/20191106_152817.webp" alt="rénovation de maison" class="min-w-[50px] md:max-w-[50%]">
+                <img src="./assets/photos/20200609_165725.webp" alt="construction et rénovation" class="min-w-[50px] md:max-w-[50%]">
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-gray-100 text-center py-36">
+    <section id="contact" class="bg-gray-100 text-center pb-20">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-8 mx-auto">Contactez-nous</h2>
             <p class="text-lg mx-10 my-20 ">Nous serions ravis de discuter de vos projets et de répondre à toutes vos
                 questions.</p>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Email Block -->
                 <div class="bg-white p-6 shadow-md rounded items-center mx-10">
                     <div>
@@ -236,27 +247,18 @@
                         <a href="tel:+330688506649" class="text-twine hover:text-twine/70 font-bold">📱06 88 50 66 49</a>
                     </div>
                 </div>
-                <!-- Location Block -->
-                <div class="bg-white p-6 shadow-md rounded  items-center mx-10">
-                    <div>
-                        <img src="./assets/icons/home-filled-svgrepo-com.svg" alt="logo" class="w-10 mx-auto">
-                        <h3 class="text-xl font-bold mb-2">Nos bureaux</h3>
-                        <p class="py-10">Venez nous rencontrer directement à nos bureaux.</p>
-                        <a href="https://www.google.com/maps?ll=49.181921,-0.394231&z=15&t=m&hl=en&gl=US&mapclient=embed&q=39+Rue+Mgr+Adam+14000+Caen+France" ><address class="text-twine font-bold">39 rue Monseigneur Adam, 14000 Caen</address></a>
-                    </div>
-                    
-                </div>
             </div>
         </div>
     </section>
     <section class="text-gray-600 body-font relative py-36">
         <div class="absolute inset-0 bg-gray-300">
-            <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
-                title="map" scrolling="no"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.9821946561347!2d-0.3968059232292702!3d49.1819244778835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a431f613f9f53%3A0x36a13cac79b66651!2s39%20Rue%20Mgr%20Adam%2C%2014000%20Caen%2C%20France!5e0!3m2!1sen!2sus!4v1721459462449!5m2!1sen!2sus"
-                style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <iframe
+                    width="100%" height="100%"
+                    title="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.947354947145!2d-0.3980646223744066!3d49.18258557783557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a4321f7783ae1%3A0x530dc02a39c707b6!2sRue%20Mgr%20Adam%2C%2014000%20Caen!5e0!3m2!1sfr!2sfr!4v1725122497786!5m2!1sfr!2sfr"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            ></iframe>
         </div>
         <div class="container px-5 py-24 mx-auto flex"></div>
     
